@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet var guessField: UITextField!
     
     @IBAction func guessButton(_ sender: Any) {
-        let num = arc4random_uniform(11)
+        let num = String(arc4random_uniform(11))
         
-        if guessField.text == String(num) {
+        if guessField.text == num {
             resultLabel.text = "Correct!!"
         } else {
             resultLabel.text = "Oops! The number was \(num). Try again"
